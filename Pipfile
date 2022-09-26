@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+passlib = "*"
+#chardet = "*"
+#cchardet = "*"
+#charset-normalizer = "*"
+#langdetect = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3"
