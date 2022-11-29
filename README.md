@@ -38,9 +38,11 @@ print '◆'.$trip;
 pip install -U tripcode3
 ```
 ```python
-from tripcode import tripcode
-print( tripcode('tea') )      # WokonZwxw2
-print( tripcode(u'ｋａｍｉ') )    # yGAhoNiShI
+>>> from tripcode import tripcode
+>>> tripcode('tea')
+'WokonZwxw2'
+>>> tripcode(u'ｋａｍｉ')
+'yGAhoNiShI'
 ```
 
 ### TODO

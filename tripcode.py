@@ -1,14 +1,14 @@
 ################################################################################
 # Tripcode function:
-# From: https://blog.utgw.net/entry/2021/01/05/195013
-# References: http://en.wikipedia.org/wiki/Tripcode
+# References: https://blog.utgw.net/entry/2021/01/05/195013
+#             http://en.wikipedia.org/wiki/Tripcode
 #             https://py4chan.sourceforge.net/
 #             https://pypi.org/project/tripcode/
 # License: BSDLv2
 # Language: Python 3
 # OS: independence
 
-__version__ = '0.1.3'
+__version__ = '0.1.4'
 
 
 def tripcode(tripkey: str, encoding: str = None, errors: str = None) -> str:

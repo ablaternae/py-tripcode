@@ -4,6 +4,9 @@
 [![GitHub](https://img.shields.io/github/license/ablaternae/py-tripcode)](https://github.com/ablaternae/py-tripcode/blob/trunk/LICENSE.md)
 
 This module provides a function to calculate tripcodes:
+```bash
+pip install -U tripcode3
+```
 ```python
 >>> from tripcode import tripcode
 >>> tripcode('tea')
