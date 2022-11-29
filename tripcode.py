@@ -8,7 +8,7 @@
 # Language: Python 3
 # OS: independence
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 
 def tripcode(tripkey: str, encoding: str = None, errors: str = None) -> str:

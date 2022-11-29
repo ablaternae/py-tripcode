@@ -1,14 +1,13 @@
 # Tripcode \ Python3
 
-Никто не пишет имиджборды на питоне, и такого удобного хеша просто не найти, пришлось реинжинирить алгоритм и писать самому.
+Никто не пишет имиджборды на питоне, поэтому пришлось реинжинирить алгоритм такого удобного хеша.
 
 ### Алгоритм
-
-Надо просто привести фразу к многобайтной кодировке, зашифровать и взять несколько символов. Очень просто?
+Надо просто привести фразу к многобайтной кодировке, зашифровать и взять несколько символов. Кажется очень простым?
 
 1. надо привести фразу к многобайтной _национальной_ кодировке. для японских строк нужна кодировка `shift-jis`, для польских не знаю, но пример из вики `Zwykły tripkod: User !ozOtJW9BFA Bezpieczny tripkod: User !!Oo43raDvH61` не работает в `utf-8`
-2. не просто зашифровать, а `crypt(3)` шифрованием, но библиотека `crypt` реализована только для \*nix-систем, на Windows не работает. на самом деле, достаточно алгоритма [DES](https://ru.wikipedia.org/wiki/DES)
-3. последние десять символов с конца зашифрованной со специальной солью многобайтной строки
+2. не просто зашифровать, а `crypt` шифрованием, но библиотека [crypt(3)](https://man7.org/linux/man-pages/man3/crypt.3.html) реализована только для \*nix-систем, на Windows не работает. оказалось, достаточно алгоритма [DES](https://ru.wikipedia.org/wiki/DES)
+3. взять надо последние десять символов с конца зашифрованной со специальной солью многобайтной строки
 
 Другие варианты возможны, но не будут совместимыми с оригинальным трипкодом
 
@@ -34,23 +33,21 @@ print '◆'.$trip;
   
 </details>
 
-
 ### Использование
-  
-```
+```bash
 pip install -U tripcode3
 ```
-
-```
+```python
 from tripcode import tripcode
 print( tripcode('tea') )      # WokonZwxw2
 print( tripcode(u'ｋａｍｉ') )    # yGAhoNiShI
 ```
 
-
 ### TODO
 * дополнить кодировками
 
-### License
-
-BSDLv2
+---
+![Lines of code](https://img.shields.io/tokei/lines/github/ablaternae/py-tripcode)
+![Downloads](https://img.shields.io/pypi/dm/tripcode3)
+[![Statistic](https://pepy.tech/badge/tripcode3/week)](https://pepy.tech/project/tripcode3)
+[![GitHub](https://img.shields.io/github/license/ablaternae/py-tripcode)](https://github.com/ablaternae/py-tripcode/blob/trunk/LICENSE.md)

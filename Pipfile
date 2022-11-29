@@ -5,10 +5,6 @@ name = "pypi"
 
 [packages]
 passlib = "*"
-#chardet = "*"
-#cchardet = "*"
-#charset-normalizer = "*"
-#langdetect = "*"
 
 [dev-packages]
 
